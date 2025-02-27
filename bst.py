@@ -16,5 +16,11 @@ def search_bst(root, target):
     Returns:
         bool: True if target is in the BST, False otherwise
     """
-    # TODO: Implement the search functionality
-    pass
+    while root:
+        if root.val == target:
+            return True
+        elif target < root.val:
+            root = root.left
+        else:
+            root = root.right
+    return False
